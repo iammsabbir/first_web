@@ -57,12 +57,11 @@ header ul li:hover a
 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
     background: #d3d3d3;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding:  100px;
 }
 
 #identity .nameNabout
@@ -635,7 +634,7 @@ text-align: center;
     .experiencestitle p,
     #contact .contacttitle p
     {
-        font-size: 0.8em;
+        font-size: 1rem;
     }
     .contactMe
     {
@@ -661,7 +660,6 @@ text-align: center;
     }
     #contact .contactoptions a
     {
-        font-size: 0.8em;
         padding: 10px 5px;
         height: 70px;
     }
