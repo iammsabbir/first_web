@@ -134,12 +134,12 @@ header ul li:hover a
 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
     background: #bbbbbb;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding: 10px 100px;
 }
 
 #education img
@@ -152,7 +152,7 @@ header ul li:hover a
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     max-width: 750px;
     z-index: 10;
 }
@@ -503,6 +503,15 @@ text-align: center;
     {
         max-height: 50vh;
     }
+    .experiencestitle h2
+    {
+        font-size: 2rem;
+    }
+    #portfolio .experiencestitle p
+    {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
     #contact
     {
         padding: 40px 20px;
@@ -519,6 +528,14 @@ text-align: center;
     
 }
 @media (max-width: 650px) {
+    #education
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    #education img
+    {
+        margin: auto;
+    }
     #contact .contacttitle h2,
     .experiencestitle h2
     {
@@ -595,11 +612,13 @@ text-align: center;
         align-items: center;
     }
 }
-@media (max-width: 350px) {
+@media (max-width: 412px) {
+    
     #identity
     {
         flex-direction: column;
     }
+    
     #identity .nameNabout h1,
     #education .educationInfo h1,
     #contact .contacttitle h2
@@ -627,7 +646,6 @@ text-align: center;
     #identity .selfImage
     {
         max-height: 40vh;
-        right: 10px;
     }
     #education img
     {
@@ -651,5 +669,6 @@ text-align: center;
     {
         font-size: 0.5em;
     }
+    
     
 }
