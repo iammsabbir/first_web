@@ -1,49 +1,655 @@
-body{
-    font-family: 'Aclonica', sans-serif;
-    font-family: 'Archivo Black', sans-serif;
-    font-family: 'Carter One', cursive;
-    font-family: 'Michroma', sans-serif;
-    font-family: 'Ramabhadra', sans-serif;
-    font-family: 'Roboto', sans-serif;
+*
+{
     margin: 0;
-    }
-
-.name-highlight{
-    color: red;
-    font-family: 'Aclonica', sans-serif;
-}
-h1{
-    font-size: xx-large;
-}
-h3{
-    color: red;
-    font-weight: 500;
-    font-family: 'Ramabhadra', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif; 
 }
 
-.vertical{
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(20px);
+}
+header .logo
+{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    color: #ff2020;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+
 }
 
-.identity{
-    background-image: url(images/side.png);
-    background-position: left;
-    background-size: 7%;
-    background-position-y: top;
-    background-repeat: no-repeat;
-    height: 500px;
+header ul
+{
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+header ul li
+{
+    list-style: none;
+}
+header ul li a
+{
+    text-decoration: none;
+    color: #242424;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+header ul li.active a,
+header ul li:hover a
+{
+    color: #ff2020;
+}
+#identity
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
 }
 
-.firstsection{
-    width: 40%;
-    float: left;
-    margin-left: 5%;
-    padding: 2%;
+#identity .nameNabout
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 750px;
+    z-index: 10;
+}
+#identity .nameNabout h1
+{
+    font-size: 3em;
+    font-weight: 400;
+    color: #242424;
+}
+#identity .nameNabout p
+{
+    position: relative;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    color: #242424;
+}
+.name-highlight
+{
+    font-weight: 800;
+    color: #ff2020;
+}
+.nameNabout h3
+{
+    font-weight: 400;
+    color: #ff2020;
+    letter-spacing: 0.08em;
+    margin-top: 10px;
+}
+
+.contactMe
+{
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 20px;
+    border: 2px solid #d3d3d3;
+    border-radius: 5px;
+    color: #d3d3d3;
+    letter-spacing: 0.05em;
+    background-color: #242424;
+    margin-top: 10px;
+}
+.contactMe:hover
+{
+    border: 2px solid #ff2020;
+}
+
+#identity .selfImage
+{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    max-height: 90vh;
+}
+
+#education
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #bbbbbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+#education img
+{
+    max-height: 90vh;
+}
+
+#education .educationInfo
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 750px;
+    z-index: 10;
+}
+
+#education .educationInfo h1
+{
+    font-size: 3em;
+    letter-spacing: 0.03em;
+    color: #242424;
+}
+#education .educationInfo h3
+{
+    color: #ff2020;
+    font-weight: 400;
+}
+#education .educationInfo p
+{
+    font-size: 1.1em;
+    line-height: 1.50em;
+}
+
+#experiences
+{
+    position: relative;
+    width: 100%;
+    min-height: 100hv;
+    background: #d3d3d3;
+    padding: 100px;
+}
+
+.experiencestitle
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.experiencestitle h2
+{
+    font-size: 3em;
+    letter-spacing: 0.05em;
+    color: #242424;
+}
+.experiencestitle p
+{
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #ff2020;
+    line-height: 1.3em;
+}
+#experiences .content img
+{
+    max-width: 100px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+#experiences .content img:hover
+{
+    opacity: 1;
+}
+#experiences .content h3
+{
+    color: #ff2020;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+}
+
+#experiences .content
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 40px;
+    margin: 40px 0;
+    max-width: 100%;
+}
+#experiences .content .serviceitem
+{
+    gap: 25px;
+    color: #242424;
+}
+#experiences .content .serviceitem
+{
+    background: #bbbbbb;
+    border: 2px solid #bbbbbb;
+    border-radius: 5%;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#experiences .content .serviceitem:hover
+{
+    border: 2px solid #ff2020;
+}
+
+.center
+{
+width: 100%;
+text-align: center;
+}
+
+#portfolio
+{
+    text-align: center;
+    background: #bbbbbb;
+    padding: 120px 100px;
+}
+#portfolio .experiencestitle
+{
+    padding-bottom: 20px;
+}
+#portfolio .experiencestitle p
+{
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.03em;
+}
+
+#portfolio .portfolioimages
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+#portfolio .portfolioimages img
+{
+    max-width: 100%;
+    border-radius: 5px;
+    border: 2px solid #bbbbbb;
+    transition: 0.5s;
+}
+#portfolio .portfolioimages img:hover
+{
+    border: 2px solid #ff2020;
+}
+#contact
+{
+    background: #d3d3d3;
+    position: relative;
+    width: 100%;
+    min-height: 100hv;
+    padding: 120px 100px;
+}
+#contact .contacttitle
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+#contact .contacttitle h2
+{
+    font-size: 3em;
+    color: #242424;
+    letter-spacing: 0.05em;
+}
+#contact .contacttitle p
+{
+    font-size: 1.1em;
+    color: #ff2020;
+    line-height: 1.3em;
+    max-width: 750px;
+}
+#contact .contactoptions
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+#contact .contactoptions a
+{
+     background: #242424;
+     border-radius: 5px;
+     color: #d3d3d3;
+     height: 120px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     font-size: 1.3em;
+     transition: 0.5s;
+}
+#contact .contactoptions a:hover
+{
+    background: #ff2020;
+}
+#contact .contactoptions a ion-icon
+{
+    color: #ff2020;
+    font-size: 1.3em;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+#contact .contactoptions a:hover ion-icon
+{
+    color: #242424;
+}
+.copyright
+{
+    text-align: center;
+    background: #bbbbbb;
+    color: #242424;
+    padding: 20px 0;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+.copyright a
+{
+    color: #ff2020;
+    font-weight: 600;
+}
+
+/*=================responsive=====================*/
+/*=================responsive=====================*/
+
+@media (max-width: 1400px) {
+    header
+    {
+        width: 100%;
+        padding: 15px 90px;
+    }
+    #identity .nameNabout
+    {
+        max-width: 650px;
+    }
+    #identity .selfImage
+    {
+        max-height: 75vh;
+        position: relative;
+        right: -75px;
+    }
+    #contact .contactoptions
+    {
+        position: relative;
+        justify-content: center;
+    }
+    #contact .contactoptions a
+    {
+        padding: 0 40px;
+    }
+    
+    #contact .contactoptions a
+        {
+            font-size: 1em;
+        }
+    
+
+}
+@media (max-width: 1150px) {
+    header 
+    {
+        padding: 15px 40px;
+    }
+    #identity
+    {
+        padding: 150px 50px;
+        align-items: flex-start;
+    }
+    #identity .nameNabout
+    {
+        max-width: 580px;
+    }
+    #identity .nameNabout p
+    {
+        font-size: 1em;
+    }
+    #identity .selfImage
+    {
+        position: absolute;
+        height: 60vh;
+        right: 0;
+        
+    }
+    #education,
+    #experiences
+    {
+        padding: 100px 50px;
+    }
+    #education img
+    {
+        max-height: 60vh;
+    }
+    #education .educationInfo
+    {
+        max-width: 580px;
+    }
+    #education .educationInfo p
+    {
+        font-size: 1em;
+    }
+}
+@media (max-width: 950px) {
+    header
+    {
+        padding: 10px 20px;
+    }
+    header ul
+    {
+        gap: 15px;
+    }
+    #identity
+    {
+        padding: 110px 20px;
+    }
+    #identity .nameNabout h1
+    {
+        font-size: 2.5em;
+    }
+    .nameNabout h3
+    {
+        font-size: 1em;
+    }
+    .contactMe
+    {
+        max-width: 150px;
+        font-size: 1em;
+    }
+    #identity .selfImage
+    {
+        max-height: 55vh;
+    }
+    #education
+    {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+   
+    #experiences .content
+    {
+        grid-template-columns: repeat(2,2fr);
+    }
+    #contact .contactoptions
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 750px) {
+    #identity .selfImage
+    {
+        max-height: 50vh;
+    }
+    #contact
+    {
+        padding: 40px 20px;
+    }
+    #contact .contacttitle p
+    {
+        max-width: 550px;
+    }
+    #contact .contactoptions a
+    {
+        padding: 0 20px;
+        height: 100px;
+    }
     
 }
-
-.firstsection img{
-    width: 100%;
+@media (max-width: 650px) {
+    #contact .contacttitle h2,
+    .experiencestitle h2
+    {
+        font-size: 2em;
+    }
+    #contact .contactoptions
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    #portfolio
+    {
+        padding: 80px 20px;
+    }
+    #portfolio .portfolioimages
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .menuToggle
+    {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menuToggle::before
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #242424;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        box-shadow: 0 10px #242424;
+    }
+    .menuToggle::after
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #242424 ;
+        transform: translateY( 10px);
+        transition: 0.5s;
+    }
+    header.active .menuToggle::before
+    {
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 #242424;
+    }
+    header.active .menuToggle::after
+    {
+        transform: translateY(0px) rotate(315deg);
+        box-shadow: 0 0 #242424;
+    }
+    header ul
+    {
+        display: none;
+    }
+    header.active ul
+    {
+        position: fixed;
+        left: 0;
+        top: 49px;
+        width: 100%;
+        height: calc(100vh - 49px);
+        background: rgba(50, 50, 50, 0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 350px) {
+    #identity
+    {
+        flex-direction: column;
+    }
+    #identity .nameNabout h1,
+    #education .educationInfo h1,
+    #contact .contacttitle h2
+    {
+        font-size: 1.7em;
+    }
+    .nameNabout h3,
+    #education .educationInfo h3
+    {
+        font-size: 0.8em;
+    }
+    #identity .nameNabout p,
+    #education .educationInfo p,
+    .experiencestitle p,
+    #contact .contacttitle p
+    {
+        font-size: 0.8em;
+    }
+    .contactMe
+    {
+        max-width: 120px;
+        font-size: 0.8em;
+        padding: 10px 10px;
+    }
+    #identity .selfImage
+    {
+        max-height: 40vh;
+        right: 10px;
+    }
+    #education img
+    {
+        max-height: 40vh;
+    }
+    .experiencestitle h2
+    {
+        font-size: 1.4em;
+    }
+    #experiences .content
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    #contact .contactoptions a
+    {
+        font-size: 0.8em;
+        padding: 10px 5px;
+        height: 70px;
+    }
+    .copyright
+    {
+        font-size: 0.5em;
+    }
+    
 }
