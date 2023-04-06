@@ -1,17 +1,18 @@
 *
 {
     scroll-behavior: smooth;
+    color: aliceblue;
 }
 body
 {
-    background-image: url(images/backgrouond.jpg);
+    background-image: url(images/backgrouond.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 .grandfather
 {
     width: 100%;
-    background-color: rgba(250, 235, 215, 0.603);
+    background-color: rgba(95, 95, 95, 0.603);
     backdrop-filter: blur(7px);
 }
 
@@ -27,7 +28,7 @@ body
 }
 h5
 {
-    color: #fc3232;
+    color: #a3a3a3;
 }
 .name
 {
@@ -70,10 +71,7 @@ h5
     max-width: 150px;
     margin: 0 auto;
 }
-#portfolio img
-{
-    margin: 10px 0;
-}
+
 #portfolio .images
 {
     margin-top: 40px;
@@ -122,8 +120,15 @@ footer
 .my-name, .my-name span
 {
     font-family: lemon;
+    letter-spacing: 0.2rem;
 }
 h1
 {
     font-family: lemon;
+}
+h5
+{
+    font-family: RollgatesLuxury;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
 }

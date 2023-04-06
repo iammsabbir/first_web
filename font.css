@@ -7,3 +7,7 @@
     font-family: "quico";
     src: url(font/quico.ttf);
 }
+@font-face {
+    font-family: RollgatesLuxury;
+    src: url(font/RollgatesLuxury.ttf);
+}
