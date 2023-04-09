@@ -5,7 +5,10 @@
 }
 body
 {
-    background-color: #3f3f3fa4;
+    background-image: url(images/backgrouond.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .grandfather
 {
